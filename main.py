@@ -6,10 +6,10 @@ import google.generativeai as genai
 
 app = FastAPI()
 
+# 9, 10, 11번째 줄 주변을 아래처럼 깨끗하게 변경해 주세요!
 SUPABASE_URL = "https://denjotdadkeqgbhaumgn.supabase.co"
-SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRlbmpvdGRhZGtlcWdiaGF1bWduIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2MjM0MzcsImV4cCI6MjA5NTE5OTQzN30.X0bDSYKDMIgYvNYWtKpRweFbyXboS8Az-FVU_nJNa7Q
-")
-GEMINI_KEY = os.environ.get("GEMINI_KEY", "AIzaSyAPJX0SKjH_UrSMxPGunZrOHSUa5Hb7TdQ")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "YOUR_SUPABASE_ANON_KEY")
+GEMINI_KEY = os.environ.get("GEMINI_KEY", "YOUR_GEMINI_API_KEY")
 
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 genai.configure(api_key=GEMINI_KEY)
